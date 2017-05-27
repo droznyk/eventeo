@@ -4,8 +4,11 @@
     .col-md-6.col-sm-offset-3
       %input.form-control{placeholder: 'I am searching for...', type: 'text'}
   .row.text-center
-    %p Siema
+    %p
+      = link_to 'Siema, przechodze na strone nowego eventa', new_event_path
   .row.text-center
     %ul
       - @events.each do |event|
-        %li= event.title
+        %li
+          = event.title
+          = link_to "Delete", event, method: :delete

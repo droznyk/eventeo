@@ -1,0 +1,10 @@
+%nav.navbar.navbar-default
+  .container
+    .navbar-header
+      .navbar-brand
+      Siema elo 3 2 0
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.pull-right
+        %li
+        - if current_user
+          = logout_user_link
